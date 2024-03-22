@@ -7,7 +7,7 @@ use actix_web::{get, App, HttpServer, Responder};
 
 #[get("/")]
 async fn hello() -> impl Responder {
-    "Hello OpenShift!"
+    "Hello OpenShift! This is Rust in action!"
 }
 
 #[actix_web::main]
