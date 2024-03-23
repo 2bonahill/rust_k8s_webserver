@@ -1,5 +1,4 @@
 //access webserver with http://0.0.0.0:8080/
-//You can replace yourid and yourname with anything
 
 extern crate time;
 

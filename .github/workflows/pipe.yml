@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Pipe
 
 on:
   push:
@@ -6,9 +6,22 @@ on:
   pull_request:
     branches: [ "main" ]
 
-jobs:
+env:
+  CARGO_TERM_COLOR: always
 
-  build:
+jobs:
+  rust:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: cargo build --verbose
+    - name: Run tests
+      run: cargo test --verbose
+
+  image-build:
 
     runs-on: ubuntu-latest
 
