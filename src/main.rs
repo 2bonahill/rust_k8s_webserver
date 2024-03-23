@@ -6,7 +6,7 @@ use actix_web::{get, App, HttpServer, Responder};
 
 #[get("/")]
 async fn hello() -> impl Responder {
-    "Hello! This is Rust in action!"
+    "Hello! This is Rust in Action!"
 }
 
 #[actix_web::main]
